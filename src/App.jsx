@@ -2,11 +2,15 @@
 /**
  * import { useState } from 'react'
 **/
-
-import './App.scss'
+import React from 'react';
+import './App.scss';
 
 function App() {
-  return "hello";
+  return (
+    <div className="App">
+      <h1>Test</h1>
+    </div>
+  );
 }
 
-export default App
+export default App;
