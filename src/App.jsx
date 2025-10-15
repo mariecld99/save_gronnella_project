@@ -3,10 +3,14 @@
  * import { useState } from 'react'
 **/
 
-import './App.scss'
+import './App.scss';
 
 function App() {
-  return "hello";
+  return (
+    <div className="App">
+      <h1>Test Items</h1>
+    </div>
+  );
 }
 
-export default App
+export default App;
