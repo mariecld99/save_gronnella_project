@@ -1,3 +1,28 @@
 @use "./sass/utils/_reset.scss";
-@use "./sass/utils/_variables.scss";
+@use "./sass/utils/_variables.scss" as var;
 @use "./sass/utils/_mixins.scss";
+@use 'sass:color';
+
+.btn {
+  cursor: pointer;
+  background-color: var.$or;
+  border-radius: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  font-size: 1.25rem;
+  padding: .75rem 2.5rem;
+  transition: transform 0.5s;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+  
+  &:active {
+    background-color: color.scale(var.$or, $blackness: 20%);
+    transform: scale(0.98);
+  }
+}
+
+
+.Action_panel-Buttons .btn{
+    margin: 10px;
+}
