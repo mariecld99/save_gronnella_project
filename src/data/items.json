@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Potion de santé",
-    "picture": "potion-de-sante.png",
+    "picture": "/images/potion-de-sante.png",
     "target": "health",
     "amount": 30,
     "price": 15
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Potion de magie",
-    "picture": "potion-de-magie.png",
+    "picture": "/images/potion-de-magie.png",
     "target": "mana",
     "amount": 30,
     "price": 15

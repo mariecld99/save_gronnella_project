@@ -1,15 +1,16 @@
-import React from 'react'
-import Action_Panel from './Components/Action_Panel/Action_Panel'
-import './App.scss'
+
+/**
+ * import { useState } from 'react'
+**/
+
+import './App.scss';
 
 function App() {
   return (
-    <>
-  
-      <Action_Panel />
-    </>
+    <div className="App">
+      <h1>Test Items</h1>
+    </div>
   );
 }
 
-
-export default App
+export default App;
