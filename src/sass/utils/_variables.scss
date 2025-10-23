@@ -1,4 +1,32 @@
-$noir: #1e1e2f;
-$rouge: #c0392b;
-$or: #f1c40f;
-$gris: #ecf0f1;
+// Couleurs de base
+$color-dark-primary: #1e1e2f;
+$color-dark-secondary: #14182a;
+$color-red: #c0392b;
+$color-gold: #ffd700;
+$color-gold-light: #ffed4a;
+$color-silver: #c0c0c0;
+$color-white: #f0f8ff;
+$color-gray-light: #ecf0f1;
+
+// Couleurs de stats
+$stat-health: #dc3545;
+$stat-mana: #007bff;
+$stat-attack: #ffc107;
+$stat-defense: #6c757d;
+$stat-gold: #ffd700;
+$stat-spell: #4dabf7;
+
+// Espacements
+$spacing-xs: 0.4rem;
+$spacing-sm: 0.8rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+
+// Bordures
+$border-radius-sm: 3px;
+$border-radius-md: 8px;
+$border-radius-lg: 15px;
+$border-radius-circle: 50%;
+
+// Transitions
+$transition-default: all 0.3s ease;
