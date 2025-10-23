@@ -1,4 +1,3 @@
-import "../../index.scss";
 
 /**
  * Items's properties
@@ -17,7 +16,7 @@ function Items({ name, picture, price, onUse }) {
   return (
     <div className="item" onClick={onUse}>
       <img
-         src={picture}
+        src={picture}
         alt={name.price} 
         title={name}
         className="item__image"
