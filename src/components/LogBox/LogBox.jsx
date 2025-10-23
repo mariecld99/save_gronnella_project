@@ -19,7 +19,7 @@ export function LogBox({arrayLogs}) {
                     return (
                         <>
                             <li key={index} className="logline">{log}</li>
-                            <hr className="vidule" />
+                            <hr className="logline-break" />
                         </>
                     )
                 })}
