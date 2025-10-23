@@ -1,15 +1,22 @@
+import React from "react";
+import "./Action_Panel.scss";
 
-const Action_Panel =({ onAttack, onCastSpell })=> {
-        return (
-            <div className="action-panel">
-                <div className="Action_panel-Buttons">
-                    <button className="btn" onClick={onAttack}>Attaquer</button>
-                    <button className="btn" onClick={onCastSpell}>Lancer un sort</button>
-                    <button className="btn" onClick={onCastSpell}>Utiliser un objet</button>
-                    <button className="btn" onClick={onCastSpell}>Fuir</button>
-                </div>
-            </div>
-        );
-    };
-    
+/**
+ * 
+ * @param {object} ButtonProps
+ * @param {string} ButtonProps.text   - Texte affiché par le bouton
+ * @param {function} ButtonProps.Action - Fonction exécutée lors du clic sur le bouton
+ * @returns {JSX.Element}
+ */
+
+
+const Action_Panel = ({ Action , text }) => {
+  return (
+    <button className="btn" onClick={Action}>
+        {text}
+    </button>
+  );
+};
+
 export default Action_Panel;
+

@@ -1,0 +1,48 @@
+@use "../../sass/utils/_reset";
+@use "../../sass/utils/_variables" as *;
+@use "../../sass/utils/_mixins";
+@use 'sass:color';
+
+
+
+
+.btn {
+  cursor: pointer;
+  background-color: $or;
+  color: $noir;
+  font-weight: 600;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  transition: transform 0.25s ease, background-color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+    background-color: color.scale($or, $blackness: 10%);
+  }
+
+  &:active {
+    transform: scale(0.95);
+    background-color: color.scale($or, $blackness: 20%);
+  }
+
+  &--danger {
+    background-color: $rouge;
+    color: $gris;
+
+    &:hover {
+      background-color: color.scale($rouge, $lightness: 10%);
+    }
+  }
+
+  &--neutral {
+    background-color: $gris;
+    color: $noir;
+    
+    &:hover {
+      background-color: color.scale($gris, $lightness: 10%);
+    }
+  }
+}
