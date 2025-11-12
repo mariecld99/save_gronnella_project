@@ -1,0 +1,56 @@
+@use "../../sass/utils/variables" as *;
+
+.card {
+  background-color: $noir;
+  font-family: $font-body;
+  border-radius: 10px;
+  box-shadow: inset 0 0 1em $or;
+  margin : 20px 80px;
+  padding: 40px;
+  color: $gris; 
+  text-align: justify;
+  
+
+  h3 {
+    font-family: $font-important;
+    font-size: larger;
+    letter-spacing: 0.1rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $or;
+    text-align: center;
+  }
+
+  &__text {
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    
+    p:last-child {
+        font-weight: 800;
+        text-align: center;
+    }
+  }
+}
+
+.reward {
+  margin-top: 15px;
+  font-family: $font-body;
+  text-align: center;
+  font-weight: 900;
+  
+  &__label {
+    color: $gris;
+  }
+  
+  &__value {
+    color: $or;
+    margin: 0 5px;
+  }
+  
+  &__gold {
+    color: $or;
+  }
+}
