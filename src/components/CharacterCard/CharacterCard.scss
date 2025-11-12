@@ -1,0 +1,137 @@
+@use "../../sass/utils/variables" as *;
+@use "../../sass/utils/mixins" as *;
+
+.character-card {
+  @include card-gradient;
+  @include box-shadow(2);
+  
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid $color-gold;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  transition: $transition-default;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    @include box-shadow(3);
+    border-color: $color-gold-light;
+  }
+}
+
+.character-avatar {
+  width: 125px;
+  height: 125px;
+  border-radius: $border-radius-circle;
+  margin: 0 auto $spacing-md;
+  display: block;
+  border: 3px solid $color-gold;
+  @include box-shadow(1);
+  object-fit: cover;
+}
+
+.character-name {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: $color-gold;
+  margin-bottom: 0.5rem;
+  @include text-shadow;
+}
+
+.character-class {
+  text-align: center;
+  font-size: 0.9rem;
+  color: $color-silver;
+  margin-bottom: $spacing-lg;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.character-stats {
+  margin-bottom: $spacing-lg;
+  border-radius: $border-radius-md;
+  padding: $spacing-md;
+  @include gold-border;
+
+  .stat-row:first-child {
+    border-top: none;
+  }
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  padding: $spacing-xs 0;
+  border-top: 1px solid rgba($color-gold, 0.3);
+}
+
+.stat-icon {
+  margin-right: $spacing-sm;
+
+  &.health {
+    @include stat-icon($stat-health, white);
+  }
+
+  &.mana {
+    @include stat-icon($stat-mana, white);
+  }
+
+  &.attack {
+    @include stat-icon($stat-attack, #333);
+  }
+
+  &.defense {
+    @include stat-icon($stat-defense, white);
+  }
+
+  &.gold {
+    @include stat-icon($stat-gold, #333);
+  }
+}
+
+.stat-value {
+  color: $color-white;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.spells-section {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: $border-radius-md;
+  padding: $spacing-md;
+  @include gold-border;
+}
+
+.spells-title {
+  color: $stat-spell;
+  font-size: 0.9rem;
+  margin-bottom: $spacing-sm;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.spell-item {
+  color: #e9ecef;
+  font-size: 0.85rem;
+  margin-bottom: $spacing-xs;
+  display: flex;
+  align-items: center;
+}
+
+.spell-cost {
+  color: $stat-spell;
+  font-size: 0.8rem;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
