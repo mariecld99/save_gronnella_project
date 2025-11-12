@@ -2,18 +2,17 @@ import "../../index.scss";
 
 /**
  * Items's properties
- * @typedef {object} ItemsProps
- * @property {string} name - Nom de l'élément affiché.
- * @property {string} picture - Chemin vers l'image de l'élément.
- * @property {number} price - Prix de l'élément.
- * @property {boolean} [onUse=false] - False indique une potion de santé, True indique une potion de magie.
+ * @param {object} ItemsProps
+ * @param {string} ItemsProps.name - Nom de l'élément affiché.
+ * @param {string} ItemsProps.picture - Chemin vers l'image de l'élément.
+ * @param {number} ItemsProps.price - Prix de l'élément.
+ * @param {boolean} [ItemsProps.onUse=false] - False indique une potion de santé, True indique une potion de magie.
+ * @param {boolean} ItemsProps.isPriceDisplayed - True = affiche le prix
  * 
- * Items component
- * @param {ItemsProps} props
  * @returns {JSX.Element}
  */
 
-function Items({ name, picture, price, onUse }) {
+function Items({ name, picture, price, onUse, isPriceDisplayed }) {
   return (
     <div className="item" onClick={onUse}>
       <img
@@ -22,7 +21,11 @@ function Items({ name, picture, price, onUse }) {
         title={name}
         className="item__image"
        />
-     <span className="item__price">{price}</span>
+    {
+      isPriceDisplayed
+      ? <span className="item__price">{price}</span>
+      : <></>
+    }
     </div>
   );
 }
