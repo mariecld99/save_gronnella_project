@@ -1,0 +1,33 @@
+@use "/src/sass/utils/variables" as var;
+
+.logbox-container {
+    border: var.$or 3px solid;
+    border-radius: 10px;
+    margin: .5rem;
+    padding: 1rem;
+    background-color: var.$noir;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.logcontent {
+    gap: .5rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.logline {
+    color: var.$gris;
+    cursor: default;
+    padding-left: 1rem;
+}
+
+.logbox-scroll-anchor {
+    margin-top: -1rem;
+}
+
+.logline-break {
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
