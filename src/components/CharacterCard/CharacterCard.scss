@@ -2,6 +2,7 @@
 @use "../../sass/utils/mixins" as *;
 
 .character-card {
+
   @include card-gradient;
   @include box-shadow(2);
   
@@ -14,11 +15,20 @@
   padding: $spacing-lg;
   transition: $transition-default;
   position: relative;
+  margin: 0 auto;
 
   &:hover {
     transform: translateY(-5px);
     @include box-shadow(3);
     border-color: $color-gold-light;
+  }
+  
+  @media (max-width: 900px) {
+    max-width: 280px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 100%;
   }
 }
 

@@ -2,14 +2,12 @@
 /**
  * import { useState } from 'react'
 **/
-
+import { HomePage } from './pages/HomePage/index';
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Test Items</h1>
-    </div>
+    <HomePage />
   );
 }
 
