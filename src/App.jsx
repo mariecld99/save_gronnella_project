@@ -4,11 +4,13 @@
 **/
 
 import './App.scss';
+import {getAll} from './data-access/DataAccess';
 
 function App() {
   return (
     <div className="App">
-      <h1>Test Items</h1>
+      <h1>Test data-access </h1>
+  
     </div>
   );
 }
