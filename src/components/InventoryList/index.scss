@@ -1,0 +1,28 @@
+@use "/src/sass/utils/variables" as *;
+
+.items-from-inventory-container {
+    border: $or 3px solid;
+    border-radius: 10px;
+    margin: .5rem;
+    padding: 1rem;
+    background-color: $noir;
+    height: max-content;
+}
+
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.item-show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $gris;
+}
+
+.small-item-name {
+    font-size: .875rem;
+}
