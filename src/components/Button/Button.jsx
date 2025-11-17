@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 /**
  * 
@@ -7,10 +7,12 @@ import { useNavigate } from "react-router";
  * @param {string} ButtonProps.text - Texte affiché par le bouton
  * @returns {JSX.Element}
  */
-export function Button({link, text}) {
+export function Button({ link, text }) {
     const navigate = useNavigate();
 
     return (
-        <button className="btn" onClick={() => navigate(link)}>{text}</button>
+        <button className="btn" onClick={() => navigate(link)}>
+            {text}
+        </button>
     );
 }
